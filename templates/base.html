@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn, motherfucker!</title>
+</head>
+
+<body>
+	<div class="flash-container">
+		{% for message in get_flashed_messages() %}
+		<div class="alert alert-warning">
+			<button type="button" class="close" data-dismiss="alert">n</button>
+			{{ message }}
+		</div>
+		{% endfor %}
+	</div>
+</body>

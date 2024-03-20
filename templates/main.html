@@ -1,0 +1,26 @@
+
+
+{% block title %}Heart space{% endblock %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn, motherfucker!</title>
+</head>
+
+<body>
+	<form method="POST">
+		{% import "bootstrap/wtf.html" as wtf %}
+		<div class="page-header">
+			<h1>Hello, {% if name %} {{ name }}! {% else %}Stranger! {% endif %}</h1>
+		</div>
+		{{ wtf.quick_form(form) }}
+	</form>
+</body>
+
+</html>
+{% endblock %}
